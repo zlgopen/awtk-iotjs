@@ -34,7 +34,40 @@ JS_FUNCTION(wrap_awtk_main_loop_step) {
   return jerry_create_number(ret);
 }
 
+/*for modal dialog*/
+static ret_t  main_loop_iotjs_run(main_loop_t* loop) {
+  ret_t ret = RET_OK;
+  iotjs_environment_t* env = iotjs_environment_get();
+  
+  if (!iotjs_environment_is_exiting(env)) {
+    bool more = 0;
+    do {
+      more = uv_run(iotjs_environment_loop(env), UV_RUN_ONCE);
+      more |= iotjs_process_next_tick();
+
+      jerry_value_t ret_val = jerry_run_all_enqueued_jobs();
+      if (jerry_value_is_error(ret_val)) {
+        ret_val = jerry_get_value_from_error(ret_val, true);
+        iotjs_uncaught_exception(ret_val);
+        jerry_release_value(ret_val);
+      }
+
+      if (more == false) {
+        more = uv_loop_alive(iotjs_environment_loop(env));
+      }
+
+      if(!(loop->running)) {
+        break;
+      }
+    } while (more && !iotjs_environment_is_exiting(env));
+  }
+
+  return ret;
+}
+
+
 static ret_t tk_main_loop_run(void) {
+  main_loop()->run = main_loop_iotjs_run;
   awtk_jerryscript_eval_script(s_step_script, strlen(s_step_script));
 
   return RET_OK;

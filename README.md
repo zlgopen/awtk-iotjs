@@ -114,6 +114,5 @@ applicationInit()
 
 * 只支持 Linux 系统 (Ubuntu >= 16)。
 * 未 awtk-linux-fb 上验证，可能修改一下脚本。
-* 模态对话框暂未支持。
 
 > 理论上 Windows 平台也是可以的，但是 iotjs 没编译过。
