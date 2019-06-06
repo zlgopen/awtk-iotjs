@@ -2,6 +2,7 @@ var awtk = require('awtk');
 
 awtk.init(320, 480);
 
+
 console.log(awtk.awtkjs);
 console.log(awtk.resroot);
 
