@@ -1,10 +1,4 @@
-var awtk = require('awtk');
-
-awtk.init(320, 480);
-
-
-console.log(awtk.awtkjs);
-console.log(awtk.resroot);
+require('awtk').init(320, 480);
 
 function applicationInit() {
   var win = TWindow.create(null, 0, 0, 0, 0);
