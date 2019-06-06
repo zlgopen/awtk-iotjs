@@ -1,0 +1,14 @@
+{
+  "modules": {
+    "awtk": {
+      "native_files": ["awtk_module.c"],
+      "init": "InitAwtkNativeModule",
+      "external_libs":["awtk-jerryscript", "jerryscript", "awtk", "assets", "glad", "gpinyin", "linebreak", "nanovg", 
+      "SDL2", "gtk-3", "gdk-3", "sndio", "Xext", "X11", "stdc++", "dl", "m"]
+    },
+    "mymodule": {
+      "native_files": ["my_module.c"],
+      "init": "InitMyNativeModule"
+    }
+  }
+}
