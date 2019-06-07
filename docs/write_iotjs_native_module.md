@@ -1,5 +1,9 @@
 # 为 iotjs 开发原生模块
 
+> [iotjs](https://github.com/pando-project/iotjs) 是三星开源的 javascript 物联网开发平台。它为 javascript 应用程序提供了访问硬件、网络、文件系统和异步化的能力，功能类似于 nodejs，但无论是代码体积还是内存需求，iotjs 都要小很多，是用 javascript 开发 iot 设备应用程序的首选。
+
+>AWTK 全称 Toolkit AnyWhere，是 ZLG 开发的开源 GUI 引擎，旨在为嵌入式系统、WEB、各种小程序、手机和 PC 打造的通用 GUI 引擎，为用户提供一个功能强大、高效可靠、简单易用、可轻松做出炫酷效果的 GUI 引擎。
+
 为 [iotjs](https://github.com/pando-project/iotjs) 开发原生模块，这篇 [官方的文档](https://github.com/pando-project/iotjs/wiki/Writing-New-Module) 是必须要读的，里面使用的 mymodule 例子是可以用的。在集成 [AWTK]() 到 [iotjs](https://github.com/pando-project/iotjs) 时，也需要写一个原生模块，实际情况与例子差别很大，遇到几个坑，折腾了大半天时间。这里记个笔记，供有需要的朋友参考。
 
 ## 一、修改模块的名称

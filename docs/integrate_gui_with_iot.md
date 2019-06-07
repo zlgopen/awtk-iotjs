@@ -1,5 +1,9 @@
 # 集成 AWTK 到 iotjs
 
+> [iotjs](https://github.com/pando-project/iotjs) 是三星开源的 javascript 物联网开发平台。它为 javascript 应用程序提供了访问硬件、网络、文件系统和异步化的能力，功能类似于 nodejs，但无论是代码体积还是内存需求，iotjs 都要小很多，是用 javascript 开发 iot 设备应用程序的首选。
+
+>AWTK 全称 Toolkit AnyWhere，是 ZLG 开发的开源 GUI 引擎，旨在为嵌入式系统、WEB、各种小程序、手机和 PC 打造的通用 GUI 引擎，为用户提供一个功能强大、高效可靠、简单易用、可轻松做出炫酷效果的 GUI 引擎。
+
 用 C 语言来扩展 [iotjs](http://iotjs.net/) 不是太难的事情，但是将 GUI 集成到 iotjs 却是有些麻烦的。主要原因在于 iotjs 有个主循环 (main loop)，GUI 自己也有个主循环 (main loop)，两者不同并存，只能选一个。这里 [AWTK](https://github.com/zlgopen/awtk) 为例，介绍一下如何将 GUI 集成到 iotjs 中，这对将 GUI 集成到 nodejs 也是有参考价值。
 
 ## 一、以谁为主
