@@ -116,3 +116,10 @@ applicationInit()
 * 未 awtk-linux-fb 上验证，可能修改一下脚本。
 
 > 理论上 Windows 平台也是可以的，但是 iotjs 没编译过。
+
+## 六、内部实现文档
+
+* [为iotjs开发原生模块](docs/write_iotjs_native_module.md)
+
+* [集成GUI到iotjs](docs/integrate_gui_with_iot.md)
+
