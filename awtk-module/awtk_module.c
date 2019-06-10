@@ -75,6 +75,7 @@ static ret_t tk_main_loop_run(void) {
 
 static int gui_app_start(int32_t lcd_w, int32_t lcd_h) {
   tk_init(lcd_w, lcd_h, APP_SIMULATOR, NULL, APP_ASSETS_ROOT);
+  tk_ext_widgets_init();
 
   assets_init();
   awtk_js_init();
