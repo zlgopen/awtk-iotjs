@@ -9,10 +9,6 @@
           "external_libs":["SDL2", "gtk-3", "gdk-3", "sndio", "Xext", "X11", "stdc++", "dl", "m"]
         }
       }
-    },
-    "mymodule": {
-      "native_files": ["my_module.c"],
-      "init": "InitMyNativeModule"
     }
   }
 }

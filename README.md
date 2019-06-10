@@ -4,11 +4,7 @@
 
 * 1. 关于 [iotjs](http://iotjs.net/)
 
-> Internet of Things technologies connect "Things" and the things are getting smarter based on the connection. However there are still some barriers that each devices require its own application and/or services.
-
->IoT.js aims to provide inter-operable service platform in the world of IoT, based on web technology. The target of IoT.js is to run in resource constrained devices such as only few kilobytes of RAM available device. Thus it will supports very wide range of "Things".
-
-> IoT.js is just taking the first steps and would like to get together with developers who has interests on our goal.
+> [iotjs](https://github.com/pando-project/iotjs) 是三星开源的 javascript 物联网开发平台。它为 javascript 应用程序提供了访问硬件、网络、文件系统和异步化的能力，功能类似于 nodejs，但无论是代码体积还是内存需求，iotjs 都要小很多，是用 javascript 开发 iot 设备应用程序的首选。
 
 * 2. 关于 [AWTK](https://github.com/zlgopen/awtk)
 
@@ -116,3 +112,9 @@ applicationInit()
 * 未 awtk-linux-fb 上验证，可能修改一下脚本。
 
 > 理论上 Windows 平台也是可以的，但是 iotjs 没编译过。
+
+## 六、内部实现文档
+
+* [为 iotjs 开发原生模块](docs/write_iotjs_native_module.md)
+
+* [集成 GUI 到 iotjs](docs/integrate_gui_with_iot.md)
