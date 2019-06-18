@@ -78,7 +78,8 @@ static int gui_app_start(int32_t lcd_w, int32_t lcd_h) {
   tk_ext_widgets_init();
 
   assets_init();
-  awtk_js_init();
+  awtk_iotjs_jerryscript_init();
+
   main_loop()->running = TRUE;
   awtk_jerryscript_eval_awtk_js(AWTK_JS_FILE);
 
