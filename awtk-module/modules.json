@@ -3,7 +3,7 @@
     "awtk": {
       "native_files": ["awtk_module.c"],
       "init": "InitAwtkNativeModule",
-      "external_libs":["awtk-jerryscript", "jerryscript", "awtk", "assets", "gpinyin", "linebreak", "nanovg"], 
+      "external_libs":["awtk-jerryscript", "jerryscript", "awtk", "extwidgets", "widgets", "base", "tkc", "assets", "gpinyin", "linebreak", "nanovg"], 
       "platforms": {
         "linux": {
           "external_libs":["glad", "SDL2", "gtk-3", "gdk-3", "sndio", "Xext", "X11", "stdc++", "dl", "m"]
