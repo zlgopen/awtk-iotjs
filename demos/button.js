@@ -7,6 +7,8 @@ function applicationInit() {
   ok.setText("Quit");
   ok.setSelfLayoutParams("center", "middle", "50%", "30");
 
+  console.log('TEventType.CLICK:' + TEventType.CLICK);
+
   ok.on(TEventType.CLICK, function(evt) {
     var e = TPointerEvent.cast(evt);
     console.log("on click: " + e.x + " " + e.y);
