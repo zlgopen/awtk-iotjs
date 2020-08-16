@@ -8,5 +8,7 @@ else
   JS_FILE="$1"
 fi
 
+echo ${IOTJS_ROOT}/build/x86_64-linux/debug/bin/iotjs "$JS_FILE"
 ${IOTJS_ROOT}/build/x86_64-linux/debug/bin/iotjs "$JS_FILE"
+
 

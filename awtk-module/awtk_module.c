@@ -77,16 +77,15 @@ static ret_t tk_main_loop_run(void) {
 }
 
 static int gui_app_start(int32_t lcd_w, int32_t lcd_h) {
-  tk_init(lcd_w, lcd_h, APP_SIMULATOR, NULL, APP_ASSETS_ROOT);
+  tk_init(lcd_w, lcd_h, APP_SIMULATOR, NULL, NULL);
   tk_ext_widgets_init();
 
   assets_init();
   awtk_iotjs_jerryscript_init();
 
   main_loop()->running = TRUE;
-  log_debug("AWTK_JS_FILE:%s\n", AWTK_JS_FILE);
   jerry_script_eval_buff(s_boot_script, strlen(s_boot_script), "iotjs_boot.js", TRUE);
-  jerry_script_eval_file(AWTK_JS_FILE, TRUE);
+  jerry_script_eval_file("awtk", TRUE);
 
   tk_main_loop_run();
 
@@ -110,8 +109,6 @@ jerry_value_t InitAwtkNativeModule() {
   jerry_value_t m = jerry_create_object();
 
   iotjs_jval_set_method(m, "init", awtk_init);
-  iotjs_jval_set_property_string_raw(m, "awtkjs", AWTK_JS_FILE);
-  iotjs_jval_set_property_string_raw(m, "resroot", APP_ASSETS_ROOT);
 
   jerryx_handler_register_global((const jerry_char_t*)"awtk_main_loop_step", wrap_awtk_main_loop_step);
 

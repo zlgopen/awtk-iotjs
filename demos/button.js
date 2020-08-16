@@ -13,12 +13,7 @@ function applicationInit() {
     var e = TPointerEvent.cast(evt);
     console.log("on click: " + e.x + " " + e.y);
 
-    console.log("before TDialog.confirm");
-    if(TDialog.confirm('hello awtk', 'Are you sure to quit?') == 0) {
-      process.exit(0);
-    }
-    console.log("after TDialog.confirm");
-
+    process.exit(0);
     return TRet.OK;
   });
 

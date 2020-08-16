@@ -1,0 +1,69 @@
+<string name="ok">
+<language name="en_US">OK</language>
+<language name="zh_CN">确定</language>
+</string>
+<string name="next">
+<language name="en_US">Next</language>
+<language name="zh_CN">下一个</language>
+</string>
+
+<string name="done">
+<language name="en_US">Done</language>
+<language name="zh_CN">完成</language>
+</string>
+
+<string name="cancel">
+<language name="en_US">Cancel</language>
+<language name="zh_CN">取消</language>
+</string>
+
+<string name="info">
+<language name="en_US">Information</language>
+<language name="zh_CN">温馨提示</language>
+</string>
+
+<string name="hello awtk">
+<language name="en_US">Hello AWTK</language>
+<language name="zh_CN">你好，AWTK</language>
+</string>
+
+<string name="value is %d">
+<language name="en_US">value is %d</language>
+<language name="zh_CN">值为%d</language>
+</string>
+
+<string name="chinese">
+<language name="en_US">Chinese</language>
+<language name="zh_CN">中文</language>
+</string>
+
+<string name="english">
+<language name="en_US">English</language>
+<language name="zh_CN">英文</language>
+</string>
+
+<string name="name">
+<language name="en_US">Name</language>
+<language name="zh_CN">名称</language>
+</string>
+
+<string name="desc">
+<language name="en_US">Description</language>
+<language name="zh_CN">描述信息</language>
+</string>
+
+<string name="multi line text">
+  <language name="en_US">
+it
+is
+a
+multi-line
+Translate text 
+(center)
+  </language>
+</string>
+
+<string name="&lt;&quot;en&amp;zh&quot;&gt;">
+<language name="en_US">&lt;&quot;en&amp;zh&quot;&gt;</language>
+<language name="zh_CN">&lt;&quot;英文&amp;中文&quot;&gt;</language>
+</string>
