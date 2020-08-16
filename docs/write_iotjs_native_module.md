@@ -55,7 +55,7 @@ awtk.cmake 的内容如下：
 GET_FILENAME_COMPONENT(PROJ_ROOT "${CMAKE_CURRENT_LIST_DIR}/../../" ABSOLUTE)
 
 SET(AWTK_ROOT ${PROJ_ROOT}/awtk)
-SET(AWTK_JS_ROOT ${PROJ_ROOT}/awtk-js)
+SET(AWTK_JS_ROOT ${PROJ_ROOT}/awtk-jerryscript)
 SET(APP_ASSETS_ROOT ${AWTK_ROOT}/demos)
 SET(AWTK_JS_FILE ${AWTK_JS_ROOT}/src/awtk.js)
 
@@ -88,10 +88,10 @@ include(cmake/iotjs.cmake)
 
 ## 三、放在独立的目录
 
-将模块放在独立的目录中，管理起来方便一些，awtk-iotjs 是为 iotjs 写的模块，它依赖与 awtk 和 awtk-js，将在几个模块放在同级的目录。
+将模块放在独立的目录中，管理起来方便一些，awtk-iotjs 是为 iotjs 写的模块，它依赖与 awtk 和 awtk-jerryscript，将在几个模块放在同级的目录。
 
 * awtk
-* awtk-js
+* awtk-jerryscript
 * iotjs
 * awtk-iotjs
 

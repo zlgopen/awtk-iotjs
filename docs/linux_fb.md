@@ -48,14 +48,14 @@ cd -
 
 > 嵌入式版本，要修改SConstruct中工具链和tslib相关参数，请参考awtk-linux-fb的README.md。
 
-* 下载编译 awtk-js
+* 下载编译 awtk-jerryscript
 
 
 下载：
 
 ```
-git clone https://github.com/zlgopen/awtk-js.git
-cd awtk-js
+git clone https://github.com/zlgopen/awtk-jerryscript.git
+cd awtk-jerryscript
 git clone https://github.com/jerryscript-project/jerryscript.git 3rd/jerryscript
 cd -
 ```
@@ -63,7 +63,7 @@ cd -
 编译：
 
 ```
-cd awtk-js
+cd awtk-jerryscript
 scons
 cd -
 ```
@@ -91,7 +91,7 @@ cd -
 
 ```
 mkdir awtk-linux-fb/release/js
-cp awtk-js/src/awtk.js awtk-linux-fb/release/js
+cp awtk-jerryscript/src/awtk.js awtk-linux-fb/release/js
 cp awtk-iotjs/demos/button.js awtk-linux-fb/release/js
 cp iotjs/build/x86_64-linux/debug/bin/iotjs  awtk-linux-fb/release/bin
 ```

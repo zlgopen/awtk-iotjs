@@ -2,6 +2,7 @@
 #include "awtk_js.h"
 #include "iotjs_def.h"
 #include "jerryscript-ext/handler.h"
+#include "jerry_script_helper.h"
 
 extern ret_t assets_init(void);
 
@@ -17,6 +18,8 @@ const char* s_step_script = "\
   }\
   awtkStepId = setInterval(awtkStep, 16);\
 }())";
+
+const char* s_boot_script = "var exports = {}";
 
 JS_FUNCTION(wrap_awtk_main_loop_step) {
   bool_t ret = FALSE;
@@ -68,8 +71,8 @@ static ret_t  main_loop_iotjs_run(main_loop_t* loop) {
 
 static ret_t tk_main_loop_run(void) {
   main_loop()->run = main_loop_iotjs_run;
-  awtk_jerryscript_eval_script(s_step_script, strlen(s_step_script));
 
+  jerry_script_eval_buff(s_step_script, strlen(s_step_script), "step.js", TRUE);
   return RET_OK;
 }
 
@@ -81,7 +84,9 @@ static int gui_app_start(int32_t lcd_w, int32_t lcd_h) {
   awtk_iotjs_jerryscript_init();
 
   main_loop()->running = TRUE;
-  awtk_jerryscript_eval_awtk_js(AWTK_JS_FILE);
+  log_debug("AWTK_JS_FILE:%s\n", AWTK_JS_FILE);
+  jerry_script_eval_buff(s_boot_script, strlen(s_boot_script), "iotjs_boot.js", TRUE);
+  jerry_script_eval_file(AWTK_JS_FILE, TRUE);
 
   tk_main_loop_run();
 

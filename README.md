@@ -32,11 +32,11 @@ scons
 cd -
 ```
 
-* 下载编译 awtk-js
+* 下载编译 awtk-jerryscript
 
 ```
-git clone https://github.com/zlgopen/awtk-js.git
-cd awtk-js
+git clone https://github.com/zlgopen/awtk-jerryscript.git
+cd awtk-jerryscript
 git clone https://github.com/jerryscript-project/jerryscript.git 3rd/jerryscript
 scons
 cd -
@@ -72,10 +72,10 @@ cd awtk-iotjs
 在开发时可以使用：
 
 * iotjs 提供的模块。
-* awtk-js 提供的 GUI 控件。
+* awtk-jerryscript 提供的 GUI 控件。
 * 其它第三方模块。
 
-与 awtk-js 主要差异是需要加载并初始化 awtk：
+与 awtk-jerryscript 主要差异是需要加载并初始化 awtk：
 
 ```
 require('awtk').init(320, 480);
