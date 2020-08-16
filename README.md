@@ -14,6 +14,8 @@
 
 ## 二、编译
 
+> 如果下载太慢，可以把github.com换成hub.fastgit.org
+
 * 下载编译 iotjs
 
 ```
