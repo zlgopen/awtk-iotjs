@@ -3,7 +3,7 @@
     "awtk": {
       "native_files": ["awtk_module.c"],
       "init": "InitAwtkNativeModule",
-      "external_libs":["awtk-jerryscript", "awtk_global", "extwidgets", "widgets", "awtk_linux_fb", "base", "fribidi", "conf_io", "tkc", "assets", "gpinyin", "linebreak", "nanovg"], 
+      "external_libs":["awtk-jerryscript", "awtk_global", "extwidgets", "widgets", "awtk_linux_fb", "base", "fribidi", "conf_io","csv","ubjson","streams","miniz","hal", "tkc_static", "assets", "gpinyin", "linebreak", "nanovg"], 
       "platforms": {
         "linux": {
           "external_libs":["awtk_linux_fb", "nanovg-agge", "agge", "stdc++", "dl", "m"]
