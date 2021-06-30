@@ -14,7 +14,7 @@
 
 ## 二、编译
 
-> 如果下载太慢，可以把github.com换成hub.fastgit.org
+> 如果下载太慢，可以把 github.com 换成 hub.fastgit.org
 
 * 下载编译 iotjs
 
@@ -40,7 +40,8 @@ cd -
 git clone https://github.com/zlgopen/awtk-jerryscript.git
 cd awtk-jerryscript
 git clone https://github.com/jerryscript-project/jerryscript.git 3rd/jerryscript
-scons
+cd 3rd/jerryscript/jerryscript && git checkout 8ba0d1b6ee5a065a42f3b306771ad8e3c0d819bc && cd -
+scons IOTJS=true
 cd -
 ```
 
@@ -64,6 +65,14 @@ cd awtk-iotjs
 > 请确认以上项目均在同一个目录。
 
 ## 三、运行 DEMO
+
+* 生成示例代码的资源
+
+```
+python scripts/update_res.py all 
+```
+
+* 运行 demo
 
 ```
 ./run.sh demos/buttons.js
